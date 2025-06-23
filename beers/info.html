@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About the project</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Jacquard+12&family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #fff0e1 0%, #fde3bd 50%, #edceae 100%);
+            font-family: 'Inter', sans-serif;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        header {
+            background-color: #f2cc94e5;
+            padding: 10px;
+        }
+        
+        @keyframes shimmer {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(100%); }
+        }
+        
+        header img {
+            transition: transform 0.3s ease;
+            position: relative;
+            margin-left: 20px;
+            z-index: 1;
+        }
+        
+        header img:hover {
+            transform: scale(1.1);
+        }
+        
+        main {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        
+        .info-container {
+            width: 100%;
+            max-width: 800px;
+            position: relative;
+        }
+        
+        .info-description {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .description-container {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 
+                0 20px 40px rgba(0,0,0,0.1),
+                0 0 0 1px rgba(255,255,255,0.2);
+            border: 1px solid rgba(255,255,255,0.3);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .description-container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #89350b, #d38621, #ffddb9);
+        }
+        
+        .description-container h2 {
+            font-family: 'Jacquard 12', serif;
+            font-size: 3rem;
+            color: #89350b;
+            text-align: center;
+            margin-bottom: 30px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+            position: relative;
+        }
+        
+        .description-container h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 3px;
+            background: linear-gradient(90deg, #89350b, #d38621);
+            border-radius: 2px;
+        }
+        
+        .description-container p {
+            font-family: 'Inter', sans-serif;
+            font-size: 1.2rem;
+            line-height: 1.8;
+            color: #4a4a4a;
+            text-align: justify;
+            margin-bottom: 20px;
+        }
+        
+        .description-container p:last-child {
+            text-align: center;
+            font-weight: 600;
+            color: #89350b;
+            font-size: 1.3rem;
+            margin-top: 30px;
+            padding: 20px;
+            background: linear-gradient(135deg, rgba(137, 53, 11, 0.1), rgba(211, 134, 33, 0.1));
+            border-radius: 15px;
+            border: 2px solid rgba(137, 53, 11, 0.2);
+        }
+        
+        .highlight {
+            color: #d38621;
+            font-weight: 600;
+        }
+        
+        .portfolio-link {
+            color: #89350b;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+        
+        .portfolio-link:hover {
+            color: #d38621;
+            text-decoration: underline;
+        }
+        
+        @media (max-width: 768px) {
+            .description-container {
+                padding: 30px 20px;
+                margin: 10px;
+            }
+            
+            .description-container h2 {
+                font-size: 2.5rem;
+            }
+            
+            .description-container p {
+                font-size: 1.1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="../menu/beer_menu.html"><img src="../public/images/casa.png" alt="Home" height="50px" width="50px"></a>
+        <a href="../beers/black_beer.html"><img src="../public/images/CervezaNegra.png" alt="Cerveza Negra" height="50px" width="30px"></a>
+        <a href="../beers/golden_beer.html"><img src="../public/images/CervezaDorada.png" alt="Cerveza Dorada" height="50px" width="30px"></a>
+        <a href="../beers/pink_beer.html"><img src="../public/images/CervezaRosada.png" alt="Cerveza Rosada" height="50px" width="30px"></a>
+        <a href="../beers/radler_beer.html"><img src="../public/images/CervezaRadler.png" alt="Cerveza Radler" height="50px" width="30px"></a>
+    </header>
+    <main>
+        <div class="info-container">
+            <div class="info-description">
+                <div class="description-container">
+                    <h2>About the project</h2>
+                    <p>
+                        This project was created by <span class="highlight">Marcela Mazo Castro</span> as a learning exercise, 
+                        and to demonstrate HTML skills, as it is 100% made with HTML. 
+                        It should be noted that I am a <span class="highlight">web developer and fullstack</span>.
+                    </p>
+                    <p>
+                        I invite you to explore my <a href="#" class="portfolio-link">portfolio</a>,
+                        there you will find other projects I have done with different technologies and approaches.
+                    </p>
+                    <p>
+                        <b>Thank you for visiting my project!</b>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Viking Beer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Jacquard+12&family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #ffddb9;
+        }
+        header {
+            padding: 10px 20px;
+            background-color: #f2cc94e5;
+            position: relative;
+        }
+        .nav-container {
+            display: flex;
+            justify-content: left;
+            align-items: center;
+            gap: 15px;
+            margin: 2px;
+            flex-wrap: wrap;
+        }
+        .uk-flag-container {
+            position: absolute;
+            right: 20px;
+            top: 20px;
+            z-index: 10;
+        }
+        .uk-flag-container img {
+            width: 50px;
+            height: 30px;
+            display: block;
+        }
+        .nav-container a {
+            transition: transform 0.3s ease;
+            display: inline-block;
+        }
+        .nav-container a:hover {
+            transform: scale(1.1);
+        }
+        .nav-container img {
+            display: block;
+        }
+        .cover-image {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 20px 0;
+        }
+        .cover-image img {
+            width: 900px;
+            height: 350px;
+        }
+        .title-contianes {
+            text-align: center;
+            font-family: 'Jacquard 12', sans-serif;
+            font-size: 2.5rem;
+            font-weight: 600;
+            height: 80px;
+            width: 50%;
+            background-color: #5d1906;
+            color: #d38621;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 15px auto;
+            border-radius: 10px;
+        }
+        .menu-container {
+            font-family: 'Pixelify Sans', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 400;
+            height: auto;
+            width: 75%;
+            background-color: #a1400fc9;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            color: #000000;
+            padding: 20px;
+            margin: 15px auto;
+            border-radius: 10px;
+        }
+        .menu-container h2 {
+            font-family: 'Pixelify Sans', sans-serif;
+            font-size: 2rem;
+            font-weight: 600;
+            color: #000000;
+            text-align: center;
+            margin: 0 0 20px 0;
+            padding: 0;
+        }
+        .menu-item img{
+            width: 75px;
+            height: 110px;
+            margin: 0;
+            display: block;
+        }
+        .menu-item h3 {
+            font-family: 'Pixelify Sans', sans-serif;
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #000000;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin: 20px auto;
+            padding: 25px 0 0 0;
+        }
+        .menu-item .image-container{
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-start;
+            width: 12%;
+            margin: 0;
+            padding: 0;
+        }
+        .menu-item .content-container {
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-start;
+            width: 100%;
+            margin: 10px 0;
+            gap: 5px;
+        }
+        .menu-item .text-content{
+            display: flex;
+            flex-direction: column;
+            width: 85%;
+            margin: 0;
+            padding: 0;
+        }
+        .menu-item #description {
+            font-family: 'Pixelify Sans', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 400;
+            text-align: left;
+            display: inline-block;
+            padding: 5px;
+            width: 70%;
+            margin: 0;
+        }
+        .menu-item #price {
+            font-family: 'Pixelify Sans', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 400;
+            text-align: right;
+            display: inline-block;
+            margin: 0;
+            padding: 15px;
+            width: 25%;
+        }
+        .menu-item .description-price-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            width: 100%;
+            margin: 10px 0;
+        }
+        .menu-item #alcohol {
+            font-family: 'Pixelify Sans', sans-serif;
+            font-size: 1rem;
+            font-weight: 400;
+            text-align: right;
+            display: block;
+            margin: 0;
+            padding: 0 15px 0 0;
+            width: 50%;
+        }
+        .menu-item .alcohol-container {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            width: 100%;
+            margin-top: -5px;
+        }
+        footer {
+            text-align: center;
+            font-family: 'Pixelify Sans', sans-serif;
+            font-size: 1rem;
+            font-weight: 400;
+            color: #000000;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="nav-container">
+            <a href="../cervezas/black_beer.html"><img src="../public/images/CervezaNegra.png" alt="Cerveza Negra" height="50px" width="30px"></a>
+            <a href="../cervezas/golden_beer.html"><img src="../public/images/CervezaDorada.png" alt="Cerveza Dorada" height="50px" width="30px"></a>
+            <a href="../cervezas/pink_beer.html"><img src="../public/images/CervezaRosada.png" alt="Cerveza Rosada" height="50px" width="30px"></a>
+            <a href="../cervezas/radler_beer.html"><img src="../public/images/CervezaRadler.png" alt="Cerveza Radler" height="50px" width="30px"></a>
+            <a href="../cervezas/info.html"><img src="../public/images/info.png" alt="Info" height="30px" width="30px"></a>
+            <div class="uk-flag-container">
+                <a href="../menu/beer_menu.html"><img src="../public/images/uk.png" alt="english"></a>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="cover-image">
+            <img src="../public/images/CoverBar.png" alt="Viking Beer cover" width="800px" height="300px">
+        </div>
+        <div class="title-contianes">
+            <h1>Viking Beer</h1>
+        </div>
+        <div class="menu-container">
+            <h2>Menú</h2>
+            <div class="menu-item">
+                <div class="black-beer">
+                    <h3>Cerveza negra</h3>
+                    <div class="content-container">
+                        <div class="image-container">
+                            <a href="../cervezas/black_beer.html"><img src="../public/images/cervezaNegra.png" alt="cerveza negra"></a>
+                        </div>
+                        <div class="text-content">
+                            <div class="description-price-container">
+                                <p id="description">Cerveza negra elaborada a base de malta y caramelo, con un toque de chocolate</p>
+                                <p id="price">$13.000</p>
+                            </div>
+                            <div class="alcohol-container">
+                                <p id="alcohol">Alcohol: 3.5%</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="golden-beer">
+                    <h3>Cerveza Dorada</h3>
+                    <div class="content-container">
+                        <div class="image-container">
+                            <a href="../cervezas/golden_beer.html"><img src="../public/images/cervezaDorada.png" alt="cerveza dorada"></a>
+                        </div>
+                        <div class="text-content">
+                            <div class="description-price-container">
+                                <p id="description">Cerveza dorada elaborada a base de malta clara y lúpulo, con un toque de miel</p>
+                                <p id="price">$9.000</p>
+                            </div>
+                            <div class="alcohol-container">
+                                <p id="alcohol">Alcohol: 5.5%</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="Radler-beer">
+                    <h3>Cerveza Radler</h3>
+                    <div class="content-container">
+                        <div class="image-container">
+                            <a href="../cervezas/radler_beer.html"><img src="../public/images/cervezaRadler.png" alt="cerveza radler"></a>
+                        </div>
+                        <div class="text-content">
+                            <div class="description-price-container">
+                                <p id="description">Cerveza radler elaborada a base de malta clara y lima, con un toque de gengibre y miel</p>
+                                <p id="price">$11.000</p>
+                            </div>
+                            <div class="alcohol-container">
+                                <p id="alcohol">Alcohol: 4.5%</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="pink-beer">
+                    <h3>Cerveza Rosada</h3>
+                    <div class="content-container">
+                        <div class="image-container">
+                            <a href="../cervezas/pink_beer.html"><img src="../public/images/cervezaRosada.png" alt="cerveza rosada"></a>
+                        </div>
+                        <div class="text-content">
+                            <div class="description-price-container">
+                                <p id="description">Cerveza rosada elaborada a base de malta y fresas, con un dulce de los frutos rojos</p>
+                                <p id="price">$15.000</p>
+                            </div>
+                            <div class="alcohol-container">
+                                <p id="alcohol">Alcohol: 3.5%</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>Copyright 2025 * <b>Viking Beer</b> * Desarrollado por <a href="https://github.com/marcela981"><i>Marcela Mazo Castro</i></a></p>
+    </footer>
+</body>
+</html>

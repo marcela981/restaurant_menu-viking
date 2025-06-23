@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cerveza Negra</title>
+    <style>
+        header {
+            background-color: #f2cc94e5;
+            padding: 10px;
+        }
+        header img {
+            margin-left: 20px;
+        }
+        body {
+            background-color: #ffddb9;
+            margin: 0;
+            padding: 0;
+        }
+        .black-beer-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 100vh;
+            position: relative;
+            overflow: hidden;
+        }
+        .black-beer-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+        .black-beer-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center 75%;
+            min-height: 100vh;
+        }
+        .black-beer-description {
+            position: relative;
+            z-index: 1;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            max-width: 80%;
+            height: 100%;
+            width: 100%;
+        }
+        .description-container {
+            background-color: rgba(93, 25, 6, 0.8);
+            color: #d38621;
+            padding: 30px ;
+            border-radius: 15px;
+            margin: 50px 0 0 0;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+        }
+        .description-container h2 {
+            font-family: 'Pixelify Sans', sans-serif;
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: #d38621;
+        }
+        .description-container p {
+            font-family: 'Inter', sans-serif;
+            font-size: 1.2rem;
+            line-height: 1.6;
+            color: #ffddb9;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="../menu/restaurant_menu.html"><img src="../public/images/casa.png" alt="Home" height="50px" width="50px"></a>
+        <a href="./golden_beer.html"><img src="../public/images/CervezaDorada.png" alt="Cerveza Dorada" height="50px" width="30px"></a>
+        <a href="./pink_beer.html"><img src="../public/images/CervezaRosada.png" alt="Cerveza Rosada" height="50px" width="30px"></a>
+        <a href="./radler_beer.html"><img src="../public/images/CervezaRadler.png" alt="Cerveza Radler" height="50px" width="30px"></a>
+        <a href="info.html"><img src="../public/images/info.png" alt="Info" height="30px" width="30px"></a>
+    </header>
+    <main>
+        <div class="black-beer-container">
+            <div class="black-beer-image">
+                <img src="../public/images/CervezaNegra-ambiente.png" alt="cerveza negra">
+            </div>
+            <div class="black-beer-description">
+                <div class="description-container">
+                    <h2>Cerveza Negra</h2>
+                    <p>
+                        Cerveza negra elaborada a base de malta y caramelo, con notas de chocolate,
+                        está creada para aquellos que buscan un sabor único, delicioso y dulce con 
+                        poco alcohol.
+                        La puedes utilizar en preparaciones, como acompañamiento de comida, o simplemente
+                        para disfrutar en casa.
+                        <br><br>
+                        <b><i>¡Nos lleva a nuestro hogar Colombia!</i></b>
+                        <br>
+                        <br>
+                        <b>Nuestra cerveza negra</b> viene en dos presentaciones:
+                        <ul style="list-style-type: none; font-family: 'Inter', sans-serif; font-size: 1.2rem; line-height: 1.6; color: #ffddb9;">
+                            <li>Caja de 6 botellas de 330 ml</li>
+                            <li>Caja de 12 botellas de 330 ml</li>
+                        </ul>
+                        <br>
+                        <b>Encuentrala en todas las tiendas D1 y Oxxos de tu ciudad</b>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
