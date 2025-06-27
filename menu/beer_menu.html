@@ -48,6 +48,29 @@
         .nav-container img {
             display: block;
         }
+        .main-navigation {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin: 20px 0;
+            padding: 15px;
+            background-color: #5d1906;
+            border-radius: 10px;
+        }
+        .main-navigation a {
+            color: #d38621;
+            text-decoration: none;
+            font-family: 'Pixelify Sans', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 600;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        .main-navigation a:hover {
+            background-color: #d38621;
+            color: #5d1906;
+        }
         .cover-image {
             display: flex;
             justify-content: center;
@@ -184,6 +207,85 @@
             width: 100%;
             margin-top: -5px;
         }
+        .order-container {
+            font-family: 'Pixelify Sans', sans-serif;
+            font-size: 1.2rem;
+            font-weight: 400;
+            height: auto;
+            width: 75%;
+            background-color: #5d1906;
+            color: #d38621;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            padding: 20px;
+            margin: 15px auto;
+            border-radius: 10px;
+        }
+        .order-container h2 {
+            font-family: 'Pixelify Sans', sans-serif;
+            font-size: 2rem;
+            font-weight: 600;
+            color: #d38621;
+            text-align: center;
+            margin: 0 0 20px 0;
+            padding: 0;
+        }
+        .form-group {
+            width: 100%;
+            margin: 15px 0;
+            display: flex;
+            flex-direction: column;
+        }
+        .form-group label {
+            margin-bottom: 5px;
+            font-weight: 600;
+        }
+        .form-group input,
+        .form-group textarea {
+            padding: 10px;
+            border-radius: 5px;
+            border: 2px solid #d38621;
+            font-family: 'Pixelify Sans', sans-serif;
+            font-size: 1rem;
+        }
+        .form-group input[type="number"] {
+            width: 100px;
+            position: relative;
+            align-items: center;
+            justify-content: center;
+            margin: auto;
+        }
+        .checkbox-group,
+        .radio-group {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-top: 10px;
+        }
+        .checkbox-item,
+        .radio-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .submit-btn {
+            background-color: #d38621;
+            color: #5d1906;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 10px;
+            font-family: 'Pixelify Sans', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 600;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: background-color 0.3s ease;
+        }
+        .submit-btn:hover {
+            background-color: #f2cc94;
+        }
         footer {
             text-align: center;
             font-family: 'Pixelify Sans', sans-serif;
@@ -206,18 +308,22 @@
                 <a href="../menu/restaurant_menu.html"><img src="../public/images/col.png" alt="español"></a>
             </div>
         </div>
+        <nav class="main-navigation">
+            <a href="#menu">Menu</a>
+            <a href="#order-form">Place Your Order</a>
+        </nav>
     </header>
     <main>
         <div class="cover-image">
-            <img src="../public/images/CoverBar.png" alt="Viking Beer cover" width="800px" height="300px">
+            <img id="header-img" src="../public/images/CoverBar.png" alt="Viking Beer cover" width="800px" height="300px">
         </div>
         <div class="title-contianes">
             <h1>Viking Beer</h1>
         </div>
-        <div class="menu-container">
+        <section id="menu" class="menu-container">
             <h2>Menu</h2>
             <div class="menu-item">
-                <div class="black-beer">
+                <article class="black-beer">
                     <h3>Cerveza Negra</h3>
                     <div class="content-container">
                         <div class="image-container">
@@ -225,7 +331,7 @@
                         </div>
                         <div class="text-content">
                             <div class="description-price-container">
-                                <p id="description">Dark beer brewed with a touch of chocolate and malt.</p>
+                                <p id="description">Dark beer brewed with a touch of chocolate and malt. <i>$13.000 COP</i></p>
                                 <p id="price">$13.000 COP</p>
                             </div>
                             <div class="alcohol-container">
@@ -233,8 +339,8 @@
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="golden-beer">
+                </article>
+                <article class="golden-beer">
                     <h3>Cerveza Dorada</h3>
                     <div class="content-container">
                         <div class="image-container">
@@ -242,7 +348,7 @@
                         </div>
                         <div class="text-content">
                             <div class="description-price-container">
-                                <p id="description">Golden beer made from light malt and hops, with a touch of honey</p>
+                                <p id="description">Golden beer made from light malt and hops, with a touch of honey. <i>$9.000 COP</i></p>
                                 <p id="price">$9.000 COP</p>
                             </div>
                             <div class="alcohol-container">
@@ -250,8 +356,8 @@
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="Radler-beer">
+                </article>
+                <article class="Radler-beer">
                     <h3>Cerveza Radler</h3>
                     <div class="content-container">
                         <div class="image-container">
@@ -259,7 +365,7 @@
                         </div>
                         <div class="text-content">
                             <div class="description-price-container">
-                                <p id="description">Radler beer made from light malt and lime, with a touch of ginger and honey</p>
+                                <p id="description">Radler beer made from light malt and lime, with a touch of ginger and honey. <i>$11.000 COP</i></p>
                                 <p id="price">$11.000 COP</p>
                             </div>
                             <div class="alcohol-container">
@@ -267,8 +373,8 @@
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="pink-beer">
+                </article>
+                <article class="pink-beer">
                     <h3>Cerveza Rosada</h3>
                     <div class="content-container">
                         <div class="image-container">
@@ -276,7 +382,7 @@
                         </div>
                         <div class="text-content">
                             <div class="description-price-container">
-                                <p id="description">Pink beer made from malt and strawberries, with a touch of red fruit</p>
+                                <p id="description">Pink beer made from malt and strawberries, with a touch of red fruit. <i>$15.000 COP</i></p>
                                 <p id="price">$15.000 COP</p>
                             </div>
                             <div class="alcohol-container">
@@ -284,12 +390,80 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </article>
             </div>
-        </div>
+        </section>
+        
+        <section id="order-form" class="order-container">
+            <h2>Place Your Order</h2>
+            <form>
+                <div class="form-group">
+                    <label for="black-beer">Black Beer (quantity):</label>
+                    <input type="number" id="black-beer" name="black-beer" min="0" value="0">
+                </div>
+                
+                <div class="form-group">
+                    <label for="golden-beer">Golden Beer (quantity):</label>
+                    <input type="number" id="golden-beer" name="golden-beer" min="0" value="0">
+                </div>
+                
+                <div class="form-group">
+                    <label for="radler-beer">Radler Beer (quantity):</label>
+                    <input type="number" id="radler-beer" name="radler-beer" min="0" value="0">
+                </div>
+                
+                <div class="form-group">
+                    <label for="pink-beer">Pink Beer (quantity):</label>
+                    <input type="number" id="pink-beer" name="pink-beer" min="0" value="0">
+                </div>
+                
+                <div class="form-group">
+                    <label>Sides:</label>
+                    <div class="checkbox-group">
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="pretzels" name="sides" value="pretzels">
+                            <label for="pretzels">Traditional Pretzels</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="nachos" name="sides" value="nachos">
+                            <label for="nachos">Cheese Nachos</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="wings" name="sides" value="wings">
+                            <label for="wings">Chicken Wings</label>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label>Service Type:</label>
+                    <div class="radio-group">
+                        <div class="radio-item">
+                            <input type="radio" id="table" name="service" value="table">
+                            <label for="table">Table Service</label>
+                        </div>
+                        <div class="radio-item">
+                            <input type="radio" id="bar" name="service" value="bar">
+                            <label for="bar">Bar Service</label>
+                        </div>
+                        <div class="radio-item">
+                            <input type="radio" id="delivery" name="service" value="delivery">
+                            <label for="delivery">Delivery</label>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="special-requests">Special requests or allergies:</label>
+                    <textarea id="special-requests" name="special-requests" rows="4" placeholder="Write here any special requests or allergy information..."></textarea>
+                </div>
+                
+                <input type="submit" value="Go To Checkout" class="submit-btn">
+            </form>
+        </section>
     </main>
     <footer>
-        <p>Copyright 2025 * <b>Viking Beer</b> * Developed by <a href="https://github.com/marcela981"><i>Marcela Mazo Castro</i></a></p>
+        <p>Made with love by <a href="https://github.com/marcela981"><i>marcela981</i></a></p>
     </footer>
 </body>
 </html>

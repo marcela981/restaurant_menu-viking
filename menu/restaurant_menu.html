@@ -48,6 +48,29 @@
         .nav-container img {
             display: block;
         }
+        .main-navigation {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin: 20px 0;
+            padding: 15px;
+            background-color: #5d1906;
+            border-radius: 10px;
+        }
+        .main-navigation a {
+            color: #d38621;
+            text-decoration: none;
+            font-family: 'Pixelify Sans', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 600;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        .main-navigation a:hover {
+            background-color: #d38621;
+            color: #5d1906;
+        }
         .cover-image {
             display: flex;
             justify-content: center;
@@ -184,6 +207,86 @@
             width: 100%;
             margin-top: -5px;
         }
+        .order-container {
+            font-family: 'Pixelify Sans', sans-serif;
+            font-size: 1.2rem;
+            font-weight: 400;
+            height: auto;
+            width: 75%;
+            background-color: #5d1906;
+            color: #d38621;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            padding: 20px;
+            margin: 15px auto;
+            border-radius: 10px;
+        }
+        .order-container h2 {
+            font-family: 'Pixelify Sans', sans-serif;
+            font-size: 2rem;
+            font-weight: 600;
+            color: #d38621;
+            text-align: center;
+            margin: 0 0 20px 0;
+            padding: 0;
+        }
+        .form-group {
+            width: 100%;
+            margin: 15px 0;
+            display: flex;
+            flex-direction: column;
+        }
+        .form-group label {
+            margin-bottom: 5px;
+            font-weight: 600;
+        }
+        .form-group input,
+        .form-group textarea {
+            padding: 10px;
+            border-radius: 5px;
+            border: 2px solid #d38621;
+            font-family: 'Pixelify Sans', sans-serif;
+            font-size: 1rem;
+            
+        }
+        .form-group input[type="number"] {
+            width: 100px;
+            position: relative;
+            align-items: center;
+            justify-content: center;
+            margin: auto;
+        }
+        .checkbox-group,
+        .radio-group {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-top: 10px;
+        }
+        .checkbox-item,
+        .radio-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .submit-btn {
+            background-color: #d38621;
+            color: #5d1906;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 10px;
+            font-family: 'Pixelify Sans', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 600;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: background-color 0.3s ease;
+        }
+        .submit-btn:hover {
+            background-color: #f2cc94;
+        }
         footer {
             text-align: center;
             font-family: 'Pixelify Sans', sans-serif;
@@ -206,18 +309,22 @@
                 <a href="../menu/beer_menu.html"><img src="../public/images/uk.png" alt="english"></a>
             </div>
         </div>
+        <nav class="main-navigation">
+            <a href="#menu">Menú</a>
+            <a href="#order-form">Realizar Pedido</a>
+        </nav>
     </header>
     <main>
         <div class="cover-image">
-            <img src="../public/images/CoverBar.png" alt="Viking Beer cover" width="800px" height="300px">
+            <img id="header-img" src="../public/images/CoverBar.png" alt="Viking Beer cover" width="800px" height="300px">
         </div>
         <div class="title-contianes">
             <h1>Viking Beer</h1>
         </div>
-        <div class="menu-container">
+        <section id="menu" class="menu-container">
             <h2>Menú</h2>
             <div class="menu-item">
-                <div class="black-beer">
+                <article class="black-beer">
                     <h3>Cerveza negra</h3>
                     <div class="content-container">
                         <div class="image-container">
@@ -225,7 +332,7 @@
                         </div>
                         <div class="text-content">
                             <div class="description-price-container">
-                                <p id="description">Cerveza negra elaborada a base de malta y caramelo, con un toque de chocolate</p>
+                                <p id="description">Cerveza negra elaborada a base de malta y caramelo, con un toque de chocolate. <i>$13.000</i></p>
                                 <p id="price">$13.000</p>
                             </div>
                             <div class="alcohol-container">
@@ -233,8 +340,8 @@
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="golden-beer">
+                </article>
+                <article class="golden-beer">
                     <h3>Cerveza Dorada</h3>
                     <div class="content-container">
                         <div class="image-container">
@@ -242,7 +349,7 @@
                         </div>
                         <div class="text-content">
                             <div class="description-price-container">
-                                <p id="description">Cerveza dorada elaborada a base de malta clara y lúpulo, con un toque de miel</p>
+                                <p id="description">Cerveza dorada elaborada a base de malta clara y lúpulo, con un toque de miel. <i>$9.000</i></p>
                                 <p id="price">$9.000</p>
                             </div>
                             <div class="alcohol-container">
@@ -250,8 +357,8 @@
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="Radler-beer">
+                </article>
+                <article class="Radler-beer">
                     <h3>Cerveza Radler</h3>
                     <div class="content-container">
                         <div class="image-container">
@@ -259,7 +366,7 @@
                         </div>
                         <div class="text-content">
                             <div class="description-price-container">
-                                <p id="description">Cerveza radler elaborada a base de malta clara y lima, con un toque de gengibre y miel</p>
+                                <p id="description">Cerveza radler elaborada a base de malta clara y lima, con un toque de gengibre y miel. <i>$11.000</i></p>
                                 <p id="price">$11.000</p>
                             </div>
                             <div class="alcohol-container">
@@ -267,8 +374,8 @@
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="pink-beer">
+                </article>
+                <article class="pink-beer">
                     <h3>Cerveza Rosada</h3>
                     <div class="content-container">
                         <div class="image-container">
@@ -276,7 +383,7 @@
                         </div>
                         <div class="text-content">
                             <div class="description-price-container">
-                                <p id="description">Cerveza rosada elaborada a base de malta y fresas, con un dulce de los frutos rojos</p>
+                                <p id="description">Cerveza rosada elaborada a base de malta y fresas, con un dulce de los frutos rojos. <i>$15.000</i></p>
                                 <p id="price">$15.000</p>
                             </div>
                             <div class="alcohol-container">
@@ -284,9 +391,77 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </article>
             </div>
-        </div>
+        </section>
+        
+        <section id="order-form" class="order-container">
+            <h2>Realizar Pedido</h2>
+            <form>
+                <div class="form-group">
+                    <label for="cerveza-negra">Cerveza Negra (cantidad):</label>
+                    <input type="number" id="cerveza-negra" name="cerveza-negra" min="0" value="0">
+                </div>
+                
+                <div class="form-group">
+                    <label for="cerveza-dorada">Cerveza Dorada (cantidad):</label>
+                    <input type="number" id="cerveza-dorada" name="cerveza-dorada" min="0" value="0">
+                </div>
+                
+                <div class="form-group">
+                    <label for="cerveza-radler">Cerveza Radler (cantidad):</label>
+                    <input type="number" id="cerveza-radler" name="cerveza-radler" min="0" value="0">
+                </div>
+                
+                <div class="form-group">
+                    <label for="cerveza-rosada">Cerveza Rosada (cantidad):</label>
+                    <input type="number" id="cerveza-rosada" name="cerveza-rosada" min="0" value="0">
+                </div>
+                
+                <div class="form-group">
+                    <label>Acompañamientos:</label>
+                    <div class="checkbox-group">
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="pretzels" name="sides" value="pretzels">
+                            <label for="pretzels">Pretzels tradicionales</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="nachos" name="sides" value="nachos">
+                            <label for="nachos">Nachos con queso</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="alitas" name="sides" value="alitas">
+                            <label for="alitas">Alitas de pollo</label>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label>Tipo de servicio:</label>
+                    <div class="radio-group">
+                        <div class="radio-item">
+                            <input type="radio" id="mesa" name="servicio" value="mesa">
+                            <label for="mesa">Servicio en mesa</label>
+                        </div>
+                        <div class="radio-item">
+                            <input type="radio" id="barra" name="servicio" value="barra">
+                            <label for="barra">Servicio en barra</label>
+                        </div>
+                        <div class="radio-item">
+                            <input type="radio" id="domicilio" name="servicio" value="domicilio">
+                            <label for="domicilio">Domicilio</label>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="comentarios">Comentarios especiales o alergias:</label>
+                    <textarea id="comentarios" name="comentarios" rows="4" placeholder="Escribe aquí cualquier solicitud especial o información sobre alergias..."></textarea>
+                </div>
+                
+                <input type="submit" value="Go To Checkout" class="submit-btn">
+            </form>
+        </section>
     </main>
     <footer>
         <p>Copyright 2025 * <b>Viking Beer</b> * Desarrollado por <a href="https://github.com/marcela981"><i>Marcela Mazo Castro</i></a></p>
